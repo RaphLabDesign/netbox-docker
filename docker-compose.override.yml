@@ -24,11 +24,7 @@ services:
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
 
 volumes:
-  netbox-config:
-    external: true
-  netbox-media-files:
-    external: true
-  netbox-reports-files:
-    external: true
-  netbox-scripts-files:
-    external: true
+  netbox-config
+  netbox-media-files
+  netbox-reports-files
+  netbox-scripts-files
