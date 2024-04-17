@@ -24,7 +24,20 @@ services:
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
 
 volumes:
-  netbox-config
-  netbox-media-files
-  netbox-reports-files
-  netbox-scripts-files
+  netbox-config:
+    external:
+      name: netbox-config
+  netbox-media-files:
+    external:
+      name: netbox-media-files
+  netbox-reports-files:
+    external:
+      name: netbox-reports-files
+  netbox-scripts-files:
+    external:
+      name: netbox-scripts-files
+
+networks:
+  bridge:
+    external:
+      name: bridge
